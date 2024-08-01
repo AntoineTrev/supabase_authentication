@@ -9,18 +9,19 @@
         "dist"
     ],
     "main": "./dist/supabase-authentication.umd.cjs",
-    "module": "./dist/supabase-authentication.js",
+    "module": "./dist/supabase-authentication.es.js",
     "exports": {
         ".": {
-            "import": "./dist/supabase-authentication.js",
-            "require": "./dist/supabase-authentication.umd.cjs"
+            "import": "./dist/supabase-authentication.es.js",
+            "require": "./dist/supabase-authentication.umd.cjs",
+            "types": "./dist/types/index.d.ts"
         },
         "./style.css": "./dist/style.css"
     },
-    "types": "./dist/index.d.ts",
+    "types": "./dist/types/index.d.ts",
     "scripts": {
         "dev": "vite",
-        "build": "vue-tsc --emitDeclarationOnly && vite build",
+        "build": "vue-tsc --noEmit && vite build",
         "types": "vue-tsc",
         "preview": "vite preview"
     },
@@ -31,7 +32,6 @@
         "vue": "^3.4.31"
     },
     "devDependencies": {
-        "@babel/plugin-syntax-import-attributes": "^7.24.7",
         "@types/node": "^20.2.5",
         "@vitejs/plugin-vue": "^5.1.1",
         "typescript": "^5.2.2",

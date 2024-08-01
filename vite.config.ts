@@ -2,15 +2,15 @@ import { defineConfig } from 'vite'
 import { resolve } from "path"
 import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
-import peerDependencies from './package.json' with  { type: 'json' };
+import peerDependencies from './package.json' assert { type: 'json' };
 
 export default defineConfig({
     plugins: [
         vue(),
         dts({
             skipDiagnostics: true,
-            outputDir: resolve(__dirname, 'dist/types'),
-            entryRoot: resolve(__dirname, 'src')
+            outDir: resolve(__dirname, 'dist/types'),
+            root: resolve(__dirname, 'src')
         })
     ],
     build: {
