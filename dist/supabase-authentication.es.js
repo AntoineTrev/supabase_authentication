@@ -1711,7 +1711,7 @@ const Lr = (e, t) => {
   return n;
 }, Hr = {};
 function Kr(e, t) {
-  return br(), yr("h1", null, "test");
+  return br(), yr("h1", null, "this is a test");
 }
 const zr = /* @__PURE__ */ Lr(Hr, [["render", Kr]]);
 export {

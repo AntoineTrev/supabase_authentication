@@ -18,4 +18,4 @@ Component that was made reactive: `,e)),Wt(e,t,n,r,s,i,o,!0)}function Rr(e){retu
 * vue v3.4.34
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
-**/function Fr(){Ar()}process.env.NODE_ENV!=="production"&&Fr();const jr=(e,t)=>{const n=e.__vccOpts||e;for(const[r,s]of t)n[r]=s;return n},Lr={};function Hr(e,t){return Or(),vr("h1",null,"test")}const Kr=jr(Lr,[["render",Hr]]);q.Test=Kr,Object.defineProperty(q,Symbol.toStringTag,{value:"Module"})});
+**/function Fr(){Ar()}process.env.NODE_ENV!=="production"&&Fr();const jr=(e,t)=>{const n=e.__vccOpts||e;for(const[r,s]of t)n[r]=s;return n},Lr={};function Hr(e,t){return Or(),vr("h1",null,"this is a test")}const Kr=jr(Lr,[["render",Hr]]);q.Test=Kr,Object.defineProperty(q,Symbol.toStringTag,{value:"Module"})});

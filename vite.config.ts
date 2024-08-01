@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite'
-import { resolve } from "path"
+import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
-import peerDependencies from './package.json' assert { type: 'json' };
+import peerDependencies from './package.json' assert { type: 'json' }
 
 export default defineConfig({
     plugins: [
@@ -10,15 +10,15 @@ export default defineConfig({
         dts({
             skipDiagnostics: true,
             outDir: resolve(__dirname, 'dist/types'),
-            root: resolve(__dirname, 'src')
-        })
+            root: resolve(__dirname, 'src'),
+        }),
     ],
     build: {
         lib: {
-            entry: resolve(__dirname, "src/index.ts"),
-            name: "SupabaseAuthentication",
-            fileName: (format) => `supabase-authentication.${format}.js`,
-            formats: ['es', 'umd']
+            entry: resolve(__dirname, 'src/index.ts'),
+            name: 'SupabaseAuthentication',
+            fileName: format => `supabase-authentication.${format}.js`,
+            formats: ['es', 'umd'],
         },
         rollupOptions: {
             external: [Object.keys(peerDependencies)],
@@ -27,7 +27,7 @@ export default defineConfig({
                 globals: {
                     vue: 'Vue',
                 },
-            }
+            },
         },
     },
 })
