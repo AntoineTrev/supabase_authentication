@@ -1,2 +1,20 @@
+import { App } from 'vue'
+import PrimeVue from 'primevue/config'
+import * as componentsToRegister from './components/register'
+
 export * from './components'
-export type truc = string
+
+interface IOptionsAPpUse {
+    register?: boolean
+}
+
+export default {
+    install(app: App, { register }: IOptionsAPpUse) {
+        app.use(PrimeVue, { unstyled: true })
+        if (register) {
+            for (let c in componentsToRegister) {
+                app.use((componentsToRegister as any)[c])
+            }
+        }
+    },
+}

@@ -1,0 +1,1 @@
+export { NavbarAddonRegister } from './NavbarAddon'

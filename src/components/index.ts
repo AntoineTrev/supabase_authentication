@@ -1,2 +1,2 @@
-export { default as Test } from './Test.vue'
-export * from './Test.vue'
+export { default as NavbarAddon } from './NavbarAddon'
+export * from './NavbarAddon/navbaraddon.vue'
