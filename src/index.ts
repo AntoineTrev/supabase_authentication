@@ -12,7 +12,7 @@ export default {
     install(app: App, { register }: IOptionsAPpUse) {
         app.use(PrimeVue, { unstyled: true })
         if (register) {
-            for (let c in componentsToRegister) {
+            for (const c in componentsToRegister) {
                 app.use((componentsToRegister as any)[c])
             }
         }
